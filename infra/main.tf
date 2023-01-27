@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region = "us-west-2"
 }
 
 data "aws_ami" "app_server" {
   filter {
-    name = "image-id"
+    name   = "image-id"
     values = ["ami-830c94e3"]
   }
 
@@ -25,11 +25,10 @@ data "aws_ami" "app_server" {
 resource "aws_instance" "app_server" {
   ami           = "ami-830c94e3"
   instance_type = "t2.small"
-  subnet_id = "subnet-0d4be14d5f95eec6d"
   tags = {
     Name = "ExampleAppServerInstance-Uri-7"
   }
-  
+
   lifecycle {
     # The AMI ID must refer to an AMI that contains an operating system
     # for the `x86_64` architecture.
