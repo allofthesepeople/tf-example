@@ -15,6 +15,6 @@ output "cpu_count" {
 
 output "non_computed" {
   description = "An example of a non computed value"
-  value       = "the value is here"
+  value       = 1
 }
 
