@@ -12,9 +12,3 @@ output "cpu_count" {
   description = "Public IP address of the EC2 instance"
   value       = aws_instance.app_server.cpu_core_count 
 }
-
-output "non_computed" {
-  description = "An example of a non computed value"
-  value       = "some new value"
-}
-
