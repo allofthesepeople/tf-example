@@ -18,7 +18,9 @@ data "aws_ami" "app_server" {
     name   = "image-id"
     values = ["ami-830c94e3"]
   }
-
+  depends_on = [
+    "app_server"
+  ]
   owners = ["099720109477"] # Canonical
 }
 
