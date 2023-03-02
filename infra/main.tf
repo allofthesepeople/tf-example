@@ -18,9 +18,7 @@ data "aws_ami" "app_server" {
     name   = "image-id"
     values = ["ami-830c94e3"]
   }
-  depends_on = [
-    "app_server"
-  ]
+
   owners = ["099720109477"] # Canonical
 }
 
@@ -30,7 +28,9 @@ resource "aws_instance" "app_server" {
   tags = {
     Name = "ExampleAppServerInstance-Uri-7"
   }
-
+  depends_on = [
+    "aws_ami.app_server"
+  ]
   lifecycle {
     # The AMI ID must refer to an AMI that contains an operating system
     # for the `x86_64` architecture.
