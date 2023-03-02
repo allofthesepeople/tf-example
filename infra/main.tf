@@ -29,7 +29,7 @@ resource "aws_instance" "app_server" {
     Name = "ExampleAppServerInstance-Uri-7"
   }
   depends_on = [
-    "aws_ami.app_server"
+    aws_ami.app_server
   ]
   lifecycle {
     # The AMI ID must refer to an AMI that contains an operating system
