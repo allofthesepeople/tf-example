@@ -10,13 +10,10 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-east-1"
+  region = "us-east-1"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-09d3b3274b6c5d4aa"
-  instance_type = var.type
-  tags = {
-    Name = "ExampleAppServerInstance-Uri"
-  }
+module "sqs" {
+  source  = "terraform-aws-modules/sqs/aws"
+  version = "4.0.1"
 }
