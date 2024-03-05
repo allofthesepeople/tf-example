@@ -8,7 +8,7 @@ resource "aws_instance" "app1" {
 }
 
 resource "aws_s3_bucket" "iac-bucket" {
-  bucket = "iac-main-bucket"
+  bucket = "iac-main-bucket-roj"
 }
 
 output "app1" {
