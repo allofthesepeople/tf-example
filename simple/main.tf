@@ -9,6 +9,10 @@ resource "aws_instance" "app1" {
 
 resource "aws_s3_bucket" "iac-bucket" {
   bucket = "iac-main-bucket-roj"
+  tags = {
+    "team"       = "app-team"
+    "costcentre" = "engineering"
+  }
 }
 
 output "app1" {
