@@ -1,5 +1,5 @@
 resource "aws_instance" "app1" {
-  instance_type = "t2.micro"
+  instance_type = "t2.nano"
   ami           = "ami-0aa7d40eeae50c9a9"
   tags = {
     "team"       = "app-team"
@@ -9,10 +9,6 @@ resource "aws_instance" "app1" {
 
 resource "aws_s3_bucket" "iac-bucket" {
   bucket = "iac-main-bucket-roj"
-  tags = {
-    "team"       = "app-team"
-    "costcentre" = "engineering"
-  }
 }
 
 output "app1" {
