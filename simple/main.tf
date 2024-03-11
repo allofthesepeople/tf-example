@@ -14,3 +14,7 @@ resource "aws_s3_bucket" "iac-bucket" {
 output "app1" {
   value = aws_instance.app1.id
 }
+output "secretinfo" {
+  value = "the value"
+  sensitive = true
+}
