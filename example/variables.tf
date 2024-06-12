@@ -22,3 +22,13 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "costcentre" {
+  description = "tag to identify cost centre ownership for resources"
+  type        = string
+}
+
+variable "team" {
+  description = "tag to identify team ownership for resources"
+  type        = string
+}
