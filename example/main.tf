@@ -34,9 +34,8 @@ resource "aws_subnet" "main" {
 
 resource "aws_instance" "ec2-be" {
   instance_type = var.instance_type
-  ami = "ami-830c94e3"
+  ami = "ami-0aa7d40eeae50c9a9"
   count = 3
-  # ami = "ami-0305d0b03812a425e"
 
   subnet_id = "subnet-0aaaa2ce2b0237ba8"
   tags = {
