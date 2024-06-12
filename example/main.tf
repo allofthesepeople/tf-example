@@ -40,7 +40,9 @@ resource "aws_instance" "ec2-be" {
   subnet_id = "subnet-0aaaa2ce2b0237ba8"
   tags = {
     name = "ec2-be-${count.index}"
-    extra= var.extra
+    extra = var.extra
+    costcentre = var.costcentre
+    team = var.team
   }
 }
 
