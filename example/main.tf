@@ -9,6 +9,10 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
+module "s3-bucket" {
+  source  = "terraform-aws-modules/s3-bucket/aws"
+  version = "4.2.1"
+}
 
 provider "aws" {
   region  = "us-west-2"
