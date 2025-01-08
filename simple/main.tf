@@ -2,7 +2,7 @@ resource "aws_instance" "app1" {
   instance_type = "t2.nano"
   ami           = "ami-0aa7d40eeae50c9a9"
   tags = {
-    "team"       = "app-team-2"
+    "team"       = "app-team-3"
     "costcentre" = "engineering"
   }
 }
