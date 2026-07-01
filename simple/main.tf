@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "iac-bucket" {
 }
 
 variable "myvar" {
-  description = "alwaus testing"
+  description = "always testing"
   type        = string
 }
 
