@@ -26,5 +26,5 @@ output "secretinfo" {
 }
 
 output "varvalue" {
-  value     = var.myvalue
+  value     = var.myvar
 }
