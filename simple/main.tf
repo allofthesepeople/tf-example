@@ -19,3 +19,7 @@ output "secretinfo" {
   value     = "the value"
   sensitive = true
 }
+
+output "varvalue" {
+  value     = var.myvalue
+}
