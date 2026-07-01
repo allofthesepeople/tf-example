@@ -11,6 +11,11 @@ resource "aws_s3_bucket" "iac-bucket" {
   bucket = "iac-main-bucket-roj"
 }
 
+variable "myvar" {
+  description = "alwaus testing"
+  type        = string
+}
+
 output "app1" {
   value = aws_instance.app1.id
 }
