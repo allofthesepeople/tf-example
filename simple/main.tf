@@ -1,5 +1,5 @@
 resource "aws_instance" "app1" {
-  instance_type = "t2.nano"
+  instance_type = "t2.large"
   ami           = "ami-0aa7d40eeae50c9a9"
   tags = {
     "team"       = "app-team-4"
