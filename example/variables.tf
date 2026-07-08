@@ -32,3 +32,9 @@ variable "team" {
   description = "tag to identify team ownership for resources"
   type        = string
 }
+
+variable "secret" {
+  description = "ttesting sensitive info"
+  type        = string
+  sensitive   = true
+}
