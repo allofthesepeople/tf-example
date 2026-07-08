@@ -46,5 +46,5 @@ output "bucket_domain" {
 
 output "some_secret_value" {
   description = "a secret value"
-  value       = vars.secret
+  value       = var.secret
 }
