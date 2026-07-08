@@ -43,3 +43,8 @@ output "bucket_domain" {
   description = "Domain name of the bucket"
   value       = aws_s3_bucket_website_configuration.s3_bucket.website_domain
 }
+
+output "some_secret_value" {
+  description = "a secret value"
+  value       = vars.secret
+}
