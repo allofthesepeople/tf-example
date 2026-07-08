@@ -47,4 +47,5 @@ output "bucket_domain" {
 output "some_secret_value" {
   description = "a secret value"
   value       = var.secret
+  sensitive   = true
 }
